@@ -6,28 +6,28 @@
             supports-[padding:max(0px,env(safe-area-inset-bottom))]">
     <div class="grid grid-cols-5 h-full py-1">
 
-        <a wire:navigate href="{{ route('dashboard') }}"
-            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('requests.*') || request()->routeIs('requests') ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-500 dark:text-gray-400' }}">
-            <x-bt-icon name="ticket" class="w-6 h-6" />
-            <span class="text-[10px] font-medium leading-none">Solicitudes</span>
+        <a wire:navigate href="{{ route('users.table') }}"
+            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('users.*') ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-500 dark:text-gray-400' }}">
+            <x-bt-icon name="users" class="w-6 h-6" />
+            <span class="text-[10px] font-medium leading-none">Users</span>
         </a>
 
         <a wire:navigate href="{{ route('dashboard') }}"
-            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('tasks.pending') ? 'text-red-600 dark:text-red-400' : 'text-gray-500 dark:text-gray-400' }}">
+            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('myroute.*') ? 'text-red-600 dark:text-red-400' : 'text-gray-500 dark:text-gray-400' }}">
             <x-bt-icon name="list-bullet" class="w-6 h-6" />
-            <span class="text-[10px] font-medium leading-none">Tareas</span>
+            <span class="text-[10px] font-medium leading-none">Opt 2</span>
         </a>
 
         <a wire:navigate href="{{ route('dashboard') }}"
-            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('dashboard') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400' }}">
+            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('myroute.*') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400' }}">
             <x-bt-icon name="home" class="w-6 h-6 pt-0.5" />
-            <span class="text-[10px] font-medium leading-none">Inicio</span>
+            <span class="text-[10px] font-medium leading-none">Opt 3</span>
         </a>
 
         <a wire:navigate href="{{ route('dashboard') }}"
-            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('reports.*') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400' }}">
+            class="flex flex-col items-center justify-center space-y-1 {{ request()->routeIs('myroute.*') ? 'text-blue-600 dark:text-blue-400' : 'text-gray-500 dark:text-gray-400' }}">
             <x-bt-icon name="document-chart-bar" class="w-6 h-6" />
-            <span class="text-[10px] font-medium leading-none">Reportes</span>
+            <span class="text-[10px] font-medium leading-none">Opt 4</span>
         </a>
 
         <!-- Más -->
@@ -36,7 +36,7 @@
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" d="M6 12h.01M12 12h.01M18 12h.01" />
             </svg>
-            <span class="text-[10px] font-medium leading-none">Más</span>
+            <span class="text-[10px] font-medium leading-none">More</span>
         </button>
     </div>
 </nav>
@@ -58,7 +58,7 @@
         <div class="relative flex items-center justify-between mb-1">
             <!-- Izquierda -->
             <div class="text-sm font-semibold text-gray-700 dark:text-gray-200">
-                Más opciones
+                More options
             </div>
 
             <!-- Centro (absolutamente centrado) -->
@@ -97,18 +97,18 @@
             <div class="grid grid-cols-2 gap-1.5 mt-1">
                 <x-bt-button outline gray label="Dashboard" icon-start="ticket" sm href="{{ route('dashboard') }}"
                     class="w-full" @click="open=false; document.body.classList.remove('overflow-hidden')" />
-                <x-bt-button outline gray label="Tareas" icon-start="list-bullet" sm href="{{ route('dashboard') }}"
+                <x-bt-button outline gray label="Option 2" icon-start="list-bullet" sm href="{{ route('dashboard') }}"
                     class="w-full" @click="open=false; document.body.classList.remove('overflow-hidden')" />
 
-                <x-bt-button outline gray label="Accesos" icon-start="users" sm href="{{ route('dashboard') }}"
+                <x-bt-button outline gray label="Option 3" icon-start="users" sm href="{{ route('dashboard') }}"
                     class="w-full" @click="open=false; document.body.classList.remove('overflow-hidden')" />
 
-                <x-bt-button outline gray label="Reportes" icon-start="document-chart-bar" sm
+                <x-bt-button outline gray label="Option 4" icon-start="document-chart-bar" sm
                     href="{{ route('dashboard') }}" class="w-full"
                     @click="open=false; document.body.classList.remove('overflow-hidden')" />
 
                 <div class="col-span-2">
-                    <x-bt-button outline gray label="Administracion" icon-start="adjustments-horizontal" sm
+                    <x-bt-button outline gray label="Option 5" icon-start="adjustments-horizontal" sm
                         href="{{ route('dashboard') }}" class="w-full"
                         @click="open=false; document.body.classList.remove('overflow-hidden')" />
                 </div>
@@ -116,12 +116,12 @@
             <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700">
 
             <div class="grid grid-cols-2 gap-1.5">
-                <x-bt-button wire:navigate outline label="Preferencias" icon-start="cog-6-tooth" sm
+                <x-bt-button wire:navigate outline label="Preferences" icon-start="cog-6-tooth" sm
                     href="{{ route('dashboard') }}" class="w-full"
                     @click="open=false; document.body.classList.remove('overflow-hidden');$dispatch('show-global-spinner')" />
-                <x-bt-button outline red label="Cerrar sesión" icon-start="arrow-left-start-on-rectangle" sm
-                    class="w-full" @click="$refs.logoutFormBottom.submit()" />
-                <form method="POST" action="{{ route('dashboard') }}" x-ref="logoutFormBottom" class="hidden">
+                <x-bt-button outline red label="Logout" icon-start="arrow-left-start-on-rectangle" sm class="w-full"
+                    @click="$refs.logoutFormBottom.submit()" />
+                <form method="POST" action="{{ route('logout') }}" x-ref="logoutFormBottom" class="hidden">
                     @csrf</form>
             </div>
         </div>
