@@ -1,5 +1,5 @@
 <aside
-    class="h-full overflow-y-auto overflow-x-hidden flex-shrink-0 flex flex-col transition-all duration-300 bg-light dark:bg-gray-900 z-30"
+    class="h-full overflow-y-auto overflow-x-hidden flex-shrink-0 flex flex-col transition-all duration-300 bg-app-shell z-30"
     :class="{
         'w-10 md:w-10': !sidebarOpen,
         'w-60 md:w-60': sidebarOpen,

@@ -17,8 +17,7 @@
     @livewireStyles
 </head>
 
-<body
-    class="font-sans antialiased h-screen overflow-hidden bg-gray-100 dark:bg-zinc-950 text-slate-900 dark:text-slate-100">
+<body class="font-sans antialiased h-screen overflow-hidden bg-app-shell text-slate-900 dark:text-slate-100">
 
     <div x-data="{
         isDesktop: window.innerWidth >= 768,
@@ -41,9 +40,9 @@
 
         <main
             :class="isDesktop ?
-                'flex flex-col flex-grow bg-gray-100 dark:bg-gray-900 text-base text-gray-600 dark:text-gray-300 p-2 mt-10 overflow-hidden' :
-                'flex-1 overflow-y-auto pt-10 overscroll-contain scroll-area text-gray-600 dark:text-gray-300 beartropy-thin-scrollbar pb-12 bg-white dark:bg-gray-800'">
-            <div class="flex flex-col flex-1 h-full bg-white dark:bg-gray-800 rounded-xl p-3">
+                'flex flex-col flex-grow bg-app-shell text-base text-gray-600 dark:text-gray-300 p-2 mt-10 overflow-hidden' :
+                'flex-1 overflow-y-auto pt-10 overscroll-contain scroll-area text-gray-600 dark:text-gray-300 beartropy-thin-scrollbar pb-12 bg-app-content'">
+            <div class="flex flex-col flex-1 h-full bg-app-content rounded-xl p-3">
                 <!-- Encabezado -->
                 @if (isset($title))
                     <div

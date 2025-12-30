@@ -12,3 +12,55 @@
 @source "../../vendor/beartropy/ui/src/Components";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --bg-shell: theme('colors.gray.100');
+    --bg-content: theme('colors.white');
+}
+
+.dark {
+    --bg-shell: theme('colors.gray.900');
+    --bg-content: theme('colors.gray.800');
+}
+
+@theme {
+    --color-app-shell: var(--bg-shell);
+    --color-app-content: var(--bg-content);
+}
+
+/*
+    Alternative Combinations:
+*/
+
+/* Slate (Cool Gray)
+:root {
+    --bg-shell: theme('colors.slate.100');
+    --bg-content: theme('colors.white');
+}
+.dark {
+    --bg-shell: theme('colors.slate.950');
+    --bg-content: theme('colors.slate.900');
+}
+*/
+
+/* Zinc (Industrial)
+:root {
+    --bg-shell: theme('colors.zinc.100');
+    --bg-content: theme('colors.white');
+}
+.dark {
+    --bg-shell: theme('colors.zinc.950');
+    --bg-content: theme('colors.zinc.900');
+}
+*/
+
+/* Neutral (Warm)
+:root {
+    --bg-shell: theme('colors.neutral.100');
+    --bg-content: theme('colors.white');
+}
+.dark {
+    --bg-shell: theme('colors.neutral.950');
+    --bg-content: theme('colors.neutral.900');
+}
+*/

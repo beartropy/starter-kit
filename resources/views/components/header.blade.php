@@ -2,7 +2,7 @@
 <template x-if="!isDesktop">
     <header
         class="fixed top-0 left-0 right-0 z-50
-            bg-white/80 dark:bg-gray-900/80 backdrop-blur-md
+            bg-app-shell/80 backdrop-blur-md
             border-b border-gray-100 dark:border-gray-800
             px-2 md:px-4 py-2 md:py-1
             flex items-center justify-between">
@@ -30,7 +30,7 @@
 
 {{-- Desktop Header --}}
 <template x-if="isDesktop">
-    <header class="fixed top-0 left-0 right-0 p-1 bg-light dark:bg-gray-900">
+    <header class="fixed top-0 left-0 right-0 p-1 bg-app-shell">
         <div class="flex justify-end items-center space-x-3  mr-4 h-10">
             <a href="https://beartropy.com" target="_blank" class="flex items-center gap-2">
                 <x-bt-icon name="arrow-top-right-on-square" class="w-5 h-5" />

@@ -1,7 +1,7 @@
 <!-- Bottom Nav (mobile only) -->
 <nav x-data="{}" data-bottom-bar
     class="md:hidden fixed bottom-0 inset-x-0 z-[60]
-            bg-white/90 dark:bg-gray-900/90 backdrop-blur
+            bg-app-shell/90 backdrop-blur
             border-t border-gray-200/70 dark:border-gray-800/70
             supports-[padding:max(0px,env(safe-area-inset-bottom))]">
     <div class="grid grid-cols-5 h-full py-1">
@@ -50,7 +50,7 @@
     </div>
 
     <div x-trap.noscroll="open"
-        class="absolute inset-x-0 bottom-0 rounded-t-2xl bg-white dark:bg-gray-900
+        class="absolute inset-x-0 bottom-0 rounded-t-2xl bg-app-content
               border-t border-gray-200 dark:border-gray-800 p-4 pt-2
               max-h-[78dvh] overflow-y-auto shadow-2xl">
         <div class="w-10 h-1 rounded-full mx-auto mb-3 bg-gray-400/60 dark:bg-gray-500/40"></div>
