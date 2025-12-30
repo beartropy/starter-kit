@@ -9,11 +9,7 @@ class AuthController extends Controller
 {
     public function login()
     {
-        return view('auth.login'); // We might want to use welcome as login, or separate.
-        // Wait, the user asked for "custom starterkit... landing page that reflects this with a simple login".
-        // I put the login form IN the welcome page. So...
-        // Maybe Route::get('login') should just redirect to welcome?
-        // Or welcome IS the login page?
+        return view('auth.login');
     }
 
     public function authenticate(Request $request)

@@ -41,17 +41,11 @@
                     <div>
                         <x-bt-input label="Email address" type="email" name="email" value="{{ old('email') }}"
                             required autofocus placeholder="name@example.com" class="w-full" />
-                        @error('email')
-                            <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                        @enderror
                     </div>
 
                     <div>
                         <x-bt-input label="Password" type="password" name="password" required placeholder="••••••••"
                             class="w-full" />
-                        @error('password')
-                            <p class="mt-1 text-sm text-red-500">{{ $message }}</p>
-                        @enderror
                     </div>
 
                     <div class="flex items-center justify-between mt-4">

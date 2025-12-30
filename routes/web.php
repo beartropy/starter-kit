@@ -14,7 +14,7 @@ Route::get('/login', function () {
 })->name('login');
 
 Route::post('/login', [App\Http\Controllers\AuthController::class, 'authenticate']);
-Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
+Route::match(['get', 'post'], '/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
