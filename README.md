@@ -23,28 +23,11 @@ A production-ready starter kit pre-configured with the TALL stack and the Beartr
 
 ## 🚀 Installation
 
-You can create a new project using Composer:
+You can create a new project using Laravel:
 
 ```bash
-composer create-project beartropy/starter-kit my-app
+laravel new my-app --using=beartropy/starter-kit
 ```
-
-Or clone the repository manually:
-
-```bash
-git clone https://github.com/beartropy/starter-kit.git my-app
-cd my-app
-```
-
-### Setup
-
-Once downloaded, run the setup command to install dependencies, configure the environment, and build assets:
-
-```bash
-composer setup
-```
-
-> **Note**: This script handles `composer install`, `.env` creation, key generation, migrations, seeding, and `npm` installation/building.
 
 ## 🛠️ Development
 
