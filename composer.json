@@ -10,8 +10,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "beartropy/tables": "^2.4",
-        "beartropy/ui": "^0.11.1",
+        "beartropy/alert-system": "^0.1.0",
+        "beartropy/charts": "^1.1",
+        "beartropy/settings": "^1.1",
+        "beartropy/tables": "^2.6",
+        "beartropy/ui": "^0.11.8",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.7",
